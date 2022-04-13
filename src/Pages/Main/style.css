@@ -1,0 +1,30 @@
+.child{
+    width: 200px;
+    height: 200px;
+    /* box-shadow: 5px 10px 30px #F4F4F4, -5px -10px 30px #F4F4F4 ; */
+    box-shadow: 0 2px 15px rgb(0 0 0 / 12%);
+    border-radius: 10px;
+    background: #fff;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    line-height: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600 !important;
+    font-size: 14px;
+    justify-content: center;
+    color: #000;
+    position: relative;
+    z-index: 2;
+    transition: ease-in-out 0.5s;
+    border: none;
+    margin-right: 20px;
+    text-decoration: none;
+    cursor: pointer !important;
+}
+.child:hover{
+    background: #78cafd;    
+    color: #000;
+    transition-duration: 0.5s;
+}

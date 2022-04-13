@@ -1,0 +1,54 @@
+import React from 'react';
+
+function SendTelegram() {
+    var telegram_bot_id = "5128768212:AAFvms3OR4H6369bWUrp4CStnzEXSwAHFRE";
+    var chat_id =  -1001770493847;
+    var ready = function() {
+        let u_name = "",
+       room = "",
+        // comId = document.getElementById("comID").value;
+        tel = "",
+        muammo = "",
+        noom = "",
+        user_data = "",
+        user_fname = "";
+
+        const message = "Ariza raqami: " + noom
+        + "\nFamiliyasi:  " + user_fname
+        + "\nIsmi:  " + user_data
+        + "\nBo`lim: " + u_name 
+        + "\nXona: " + room 
+        //  "\nKompyuter Raqami: " + comId + 
+        + "\nTel:  " + tel 
+         + "\nMuammo:  " + muammo; 
+        }
+        var sendtelegram = function() {
+            ready();
+            var settings = {
+                "async": true,
+                "crossDomain": true,
+                "url": "https://api.telegram.org/bot" + telegram_bot_id + "/sendMessage",
+                "method": "POST",
+                "headers": {
+                    "Content-Type": "application/json",
+                    "cache-control": "no-cache"
+                },
+                "data": JSON.stringify({
+                    "chat_id": chat_id,
+                    "text": message;
+                })
+            };
+            $.ajax(settings).done(function(response) {
+                console.log(response);
+            });
+        
+            return false;
+        };
+  return (
+    <div>
+      
+    </div>
+  );
+}
+
+export default SendTelegram;
